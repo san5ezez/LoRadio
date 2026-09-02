@@ -1,0 +1,29 @@
+name = "loradio"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "public"
+not_found_handling = "single-page-application"
+
+[[durable_objects.bindings]]
+name = "RADIO_STATE"
+class_name = "RadioState"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RadioState"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "loradio"
+database_id = "cd9c0a95-c618-4663-bb34-2629fda1faf9"
+
+[[kv_namespaces]]
+binding = "STATE_CACHE"
+id = "331bb10a00154c918c1e8dad59a4fe68"
+
+[vars]
+VOTE_WINDOW_SECONDS = "90"
+ADMIN_LOGIN = "admin"
+# Set ADMIN_PASSWORD with `wrangler secret put ADMIN_PASSWORD`.
