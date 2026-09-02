@@ -1,5 +1,5 @@
 const app = document.querySelector('#app');
-const API_BASE = 'https://loradio.san5ez-fedorov.workers.dev';
+const API_BASE = 'https://loradio.san4ez-fedorov.workers.dev';
 let state = null;
 let tracks = [];
 const path = location.pathname;
